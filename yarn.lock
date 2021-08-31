@@ -1745,10 +1745,12 @@
   resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-phantom/-/wallet-adapter-phantom-0.4.1.tgz#db5f70aa1cf293314b447a902995099e7a3a1c16"
   integrity sha512-2Y3625SyQi0Kz9crqzrYOJD76jfDlcFhUEfJYlWWc+aJTnKwLECd91qGoBmms40PyBuTmdB9eJWTYT0Ev0NAig==
 
-"@solana/wallet-adapter-react@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-react/-/wallet-adapter-react-0.7.1.tgz#3b51028ff15a92f5cc6db990fbbc4d7b7db7f489"
-  integrity sha512-iqyMm7j5FNYOrn1hOYJtro07axEH7RQuMO93Q0gohiyu0zZEnNhbvch6e1EQMpfu2R+Z5qXJzEfbDT9X7G1aGg==
+"@solana/wallet-adapter-react@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@solana/wallet-adapter-react/-/wallet-adapter-react-0.8.3.tgz#8e2fe08e369a4462d4989f9e9e8b18a62ea02bbe"
+  integrity sha512-MpnXgOCj1RyBeYr6kK+XBsicdTu2bQL0IT1dYmLNoInixTd6mwK0xArzsGwTe45Dc7eayg0pl9Sq79MqyYbEuQ==
+  dependencies:
+    "@types/react" "^17.0.16"
 
 "@solana/wallet-adapter-solflare@^0.1.0":
   version "0.1.0"

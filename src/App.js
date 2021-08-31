@@ -42,9 +42,9 @@
 //         </ThemeProvider>
 //     );
 // };
-
+import SolanaStuff from './Solana.js'
 import React, { FC, useMemo } from 'react';
-import { WalletProvider } from '@solana/wallet-adapter-react';
+import { WalletProvider, ConnectionProvider } from '@solana/wallet-adapter-react';
 import {
     getLedgerWallet,
     getMathWallet,
@@ -60,7 +60,12 @@ import {
     WalletMultiButton,
 } from '@solana/wallet-adapter-material-ui';
 
-export const Wallet: FC = () => {
+
+import { clusterApiUrl } from '@solana/web3.js';
+
+
+
+export const Wallet = () => {
     // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking --
     // Only the wallets you want to instantiate here will be compiled into your application
     const wallets = useMemo(() => [
@@ -76,12 +81,15 @@ export const Wallet: FC = () => {
     ], []);
 
     return (
-        <WalletProvider wallets={wallets} autoConnect>
+        <ConnectionProvider endpoint={clusterApiUrl('devnet')}>
+        <WalletProvider wallets={wallets}>
             <WalletDialogProvider>
                 <WalletMultiButton/>
                 <WalletDisconnectButton/>
+                <SolanaStuff />
             </WalletDialogProvider>
         </WalletProvider>
+        </ConnectionProvider>
     );
 };
 
